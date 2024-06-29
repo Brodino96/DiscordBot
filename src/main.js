@@ -1,8 +1,8 @@
 /* ------------------------------------------------------------------------------------ */
 
 const { Client, Events, GatewayIntentBits, Partials, Message } = require("discord.js")
-const { token } = require("./token.json")
-const Config = require("./config.json")
+const { token } = require("../token.json")
+const Config = require("../config.json")
 
 /* ------------------------------------------------------------------------------------ */
 
