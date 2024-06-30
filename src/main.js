@@ -2,6 +2,7 @@
 
 const { Client, Events, GatewayIntentBits, Partials, Message, SlashCommandBuilder } = require("discord.js")
 const Config = require("./config.json")
+require("dotenv").config()
 
 /* ------------------------------------------------------------------------------------ */
 
@@ -84,4 +85,4 @@ client.once(Events.ClientReady, function(ready) {
 	console.log(`Logged in as ${ready.user.tag}`)
 })
 
-client.login(token)
+client.login(process.env.DISCORD_TOKEN)
