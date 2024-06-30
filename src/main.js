@@ -1,8 +1,7 @@
 /* ------------------------------------------------------------------------------------ */
 
-const { Client, Events, GatewayIntentBits, Partials, Message } = require("discord.js")
-const { token } = require("../token.json")
-const Config = require("../config.json")
+const { Client, Events, GatewayIntentBits, Partials, Message, SlashCommandBuilder } = require("discord.js")
+const Config = require("./config.json")
 
 /* ------------------------------------------------------------------------------------ */
 
@@ -15,10 +14,6 @@ const client = new Client({
 })
 
 /* ------------------------------------------------------------------------------------ */
-
-client.once(Events.ClientReady, function(ready) {
-	console.log(`Logged in as ${ready.user.tag}`)
-})
 
 client.on(Events.MessageReactionAdd, async function(reaction, user) {
 	if (reaction.partial) {
@@ -78,6 +73,15 @@ client.on(Events.MessageReactionRemove, async function(reaction, user) {
             }
         }
     })
+})
+
+/* ------------------------------------------------------------------------------------ */
+
+
+/* ------------------------------------------------------------------------------------ */
+
+client.once(Events.ClientReady, function(ready) {
+	console.log(`Logged in as ${ready.user.tag}`)
 })
 
 client.login(token)
