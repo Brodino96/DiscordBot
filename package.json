@@ -2,13 +2,14 @@
   "name": "discordbot",
   "version": "1.0.0",
   "description": "Packages",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Brodino",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^14.15.3"
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5"
   }
 }
